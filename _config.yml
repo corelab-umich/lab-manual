@@ -20,7 +20,7 @@ callouts:
   draft:
     title: Draft — lab review required
     color: yellow
-exclude: [README.md, CONTRIBUTING.md, Gemfile, Gemfile.lock, vendor, scripts, templates]
+exclude: [README.md, CONTRIBUTING.md, projects/seatrac-sp48/provenance.json, Gemfile, Gemfile.lock, vendor, scripts, templates]
 defaults:
   - scope:
       path: ""

@@ -6,17 +6,23 @@ parent: "SeaTrac SP-48"
 ---
 # Experiments
 
-{: .draft }
-Awaiting lab-specific content and review.
+## Record each run
+
+No historical experiment datasets were supplied with these information files. For every new run, preserve:
+
+- Objective, operator, date/time and time zone, location, weather, and water conditions.
+- SN11 build revision, payload configuration, battery state, and ADCP/GPS calibration.
+- Controller commit, selected controller, local parameter file, origin/domain, and capacity assumptions.
+- ROS bags from `.rosbags`, controller `.jld2` records, map `.images`, and VMDas recording folder.
+- Startup/stop procedure version, communications interruptions, deviations, and observations.
+- Raw data separately from processed outputs, with analysis code and units.
+
+The recorder configuration splits bags at 1800 seconds and uses file-level zstd compression. Confirm the mounted output directory and available disk space before collection. VMDas uses its configured Primary Path, which must be recorded separately.
 
 ## Experiment index
 
-| Date | Experiment ID | Build revision | Code commit | Data location | Record |
-| --- | --- | --- | --- | --- | --- |
-| No records added yet | — | — | — | — | — |
+| Date | Experiment ID | Build | Code commit | Data location |
+| --- | --- | --- | --- | --- |
+| No records migrated yet | — | — | — | — |
 
-## What to preserve
-
-Record the objective, environment, configuration, calibration, operator, code version, procedure reference, data location, observations, and deviations. Distinguish raw data from processed results and include the analysis script version.
-
-[Use the experiment template]({{ '/templates/#experiment-record' | relative_url }}). Create one dated Markdown record per experiment in this project's `records/` directory and link it in the index above. Set its parent to this project page and give it a unique permalink.
+[Use the experiment template]({{ '/templates/#experiment-record' | relative_url }}). Keep credentials out of records shared publicly. Restricted datasets and connection records belong in lab-member storage; the public index may describe their purpose without exposing sensitive files.

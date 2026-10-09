@@ -24,3 +24,7 @@ Project pages live in `projects/`. Each project has hardware, software, operatio
 Intended repository: `corelab-umich/lab-manual`. The workflow builds pull requests without deployment, and publishes main-branch pushes once GitHub Pages is enabled with GitHub Actions. Enable `gh_edit_link` only after the remote exists. Remove the draft `noindex` meta tag when the manual is ready for public search.
 
 The generated `_site/` directory is ignored. Commit source files and `Gemfile.lock`. Code/theme licensing and permission to republish lab content should be selected by the lab before public release; no license for CORE material has been assumed.
+
+## SP-48 reference archive
+
+The SN11 pages incorporate the supplied vendor/lab information files and a pinned controller-source review. Originals are preserved except for a separate credential-free workbook copy. Historical procedures and source-code assumptions require current lab verification. Restricted originals and credentials belong outside this public repository; see the shared workspace `ACCESS.md`.

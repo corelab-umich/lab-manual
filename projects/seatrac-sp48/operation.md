@@ -6,23 +6,35 @@ parent: "SeaTrac SP-48"
 ---
 # Operation
 
-{: .draft }
-Awaiting lab-specific content and review.
+## Scope and review status
 
-## Procedure status
+The recovered documents support battery maintenance, ADCP/GPS setup, and packet interpretation. They do not supply a complete, verified launch, autonomous mission, emergency-stop, recovery, and shutdown procedure. A trained lab operator must complete and review those vessel-specific steps before this page serves as an operating procedure.
 
-**Not reviewed.** This page contains the structure for a future operating procedure and cannot currently be used to operate the platform.
+## Preparation records
 
-## Required procedure sections
+1. Identify the vessel, current payload/wiring revision, battery condition, and operator.
+2. Compare the as-built system with [Hardware]({{ '/seatrac-sp48/hardware/' | relative_url }}); resolve the ADCP power-budget discrepancy and unresolved wiring notes.
+3. Check [battery storage and BMS history]({{ '/seatrac-sp48/battery/' | relative_url }}) and confirm the correct charging arrangement.
+4. Recover the current network connection details from restricted lab storage; do not commit credentials.
+5. Record the controller commit, selected control strategy, geographic origin, battery-capacity assumption, and mission limits.
 
-1. Applicable hardware revision, software versions, author, and reviewer.
-2. Required training, equipment, location constraints, and approvals.
-3. Pre-operation inspection and verified checks.
-4. Startup and confirmation of the intended operating mode.
-5. Platform-specific stop/abort procedure, expected behavior, and recovery.
-6. Mission or test execution with operating limits and monitoring.
-7. Shutdown, data transfer, and post-operation inspection.
+## Telemetry verification
 
-## Review record
+Start the receiver-only stack described in [Software]({{ '/seatrac-sp48/software/' | relative_url }}). Check fresh raw packets, GPS fix, heading, wind, and battery messages. Compare displayed values with the SeaTrac Dashboard and retain a short ROS bag. Resolve unit or timestamp disagreements before passing measurements to a controller.
 
-Use the [procedure template]({{ '/templates/#operating-procedure' | relative_url }}). Add actual commands, expected outputs, stop conditions, and evidence only after checking them on the stated configuration.
+For ADCP data acquisition, follow the documented [V200/ADCP setup]({{ '/seatrac-sp48/adcp/' | relative_url }}) and verify that VMDas receives both ADCP data and GPS messages. The original notes contain incomplete calibration steps.
+
+## Before transmitting commands
+
+Document and demonstrate the vessel's physical stop control, the mission-state transitions, the behavior on communications loss, and recovery from the intended mode. The repository's `allow_command=false` parameter continues to send manual commands, and the test stack includes a command publisher. Neither is a verified emergency-stop procedure.
+
+## Required lab review
+
+| Item | Status |
+| --- | --- |
+| Current build and network configuration | Historical records recovered; current setup needs confirmation |
+| Battery/ADCP setup | Source notes transcribed; physical validation pending |
+| Controller installation and simulation | Source reviewed; container execution unverified |
+| Launch, abort, recovery, and shutdown | Complete lab procedure still needed |
+
+Use the [operating-procedure template]({{ '/templates/#operating-procedure' | relative_url }}) to record reviewer, date, tested configuration, expected observations, and evidence.

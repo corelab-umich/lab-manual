@@ -9,8 +9,7 @@ The shared documentation repository for **Control and Optimization for Renewable
 
 Preserve the information needed to reproduce a build, understand a configuration, and continue an experiment after its original author leaves the lab.
 
-{: .draft }
-The project sections below are initial scaffolds. Hardware-specific setup and operating steps must be supplied and reviewed by the lab before use.
+The SP-48 section includes recovered SN11 information files and controller documentation. The kite and Saildrone sections are initial scaffolds. Hardware-specific procedures require review against the current configuration.
 
 ## Projects
 

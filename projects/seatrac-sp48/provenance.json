@@ -1,0 +1,37 @@
+{
+  "reviewed_on": "2026-10-09",
+  "controller_repository": "https://github.com/corelab-umich/seatrac-asv-controller",
+  "controller_commit": "20fd8cc669c3cc4dfc5e0b90afe88c7c5c191522",
+  "files": [
+    {
+      "file": "ADCP-Antenna-Setup.docx",
+      "sha256": "a82c96d6c6cf3918c1854dd9de92c0b8f63cf10f9965f7c4f84f06e983513d15",
+      "handling": "unchanged source copy"
+    },
+    {
+      "file": "Battery-Tips.docx",
+      "sha256": "889571f88060cc1a42e5c18f83e19e97861f3aeccc4b2dfde40814de4f77f2d0",
+      "handling": "unchanged source copy"
+    },
+    {
+      "file": "Boat-Wiring.pdf",
+      "sha256": "d4f9c13c03ca7cc95c554db87b4fcf8d7f201fb85a9eec3c770127f843ae628e",
+      "handling": "unchanged source copy"
+    },
+    {
+      "file": "SN11-System-Info-redacted.xlsx",
+      "sha256": "0304004bb87a09be17f4dfcf9f5a6d691cc7cd5dc62ebf5b606b3a1b9a952e16",
+      "handling": "sanitized derivative: passwords, account/connection details, device identifiers removed; source preserved"
+    },
+    {
+      "file": "SN11-Wiring.pdf",
+      "sha256": "25e11fbc44f7ef11ac1059ccb1722c387c4f17892b046665c5a111a5c9154ac4",
+      "handling": "unchanged source copy"
+    },
+    {
+      "file": "SeaTrac-Interface-Rev4.docx",
+      "sha256": "31628377840d052e1d577ae7613614f003443b5e1e4c660ee757811963618470",
+      "handling": "unchanged source copy"
+    }
+  ]
+}
